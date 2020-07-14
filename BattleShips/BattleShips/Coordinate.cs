@@ -4,33 +4,19 @@ using System.Text;
 
 namespace BattleShips
 {
-    class Coordinate
+    public class Coordinate : ICoordinate
     {
-        private int x;
-        private int y;
+        public int X { get; set; }
 
-        public Coordinate() {
-            this.x = 0;
-            this.y = 0;
-        }
-        public void setCoordinateX(int x) 
-        {
-            this.x = x;
-        }
+        public int Y { get; set; }
 
-        public void setCoordinateY(int y)
-        {
-            this.y = y;
-        }
+        public bool IsHit { get; set; }
 
-        public int getCoordinateX() 
+        public Coordinate()
         {
-            return this.x;
-        }
-
-        public int getCoordinateY()
-        {
-            return this.y;
+            X = 0;
+            Y = 0;
+            IsHit = false;
         }
     }
 }

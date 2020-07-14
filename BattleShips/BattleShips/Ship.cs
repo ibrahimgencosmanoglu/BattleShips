@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BattleShips
 {
-    class Ship
+    public class Ship
     {
         private Coordinate[] coordinate;
         private int health;
@@ -53,41 +53,41 @@ namespace BattleShips
             int yHead;
             int xHead;
 
-            if (head.getCoordinateX() == tail.getCoordinateX())
+            if (head.X == tail.X)
             {
-                if (head.getCoordinateY() > tail.getCoordinateY()) 
+                if (head.Y > tail.Y) 
                 {
-                    yHead = tail.getCoordinateY();
+                    yHead = tail.Y;
                 }
 
                 else 
                 {
-                    yHead = head.getCoordinateY();
+                    yHead = head.Y;
                 }
 
                 for (int i = 0; i < this.health; i++)
                 {
-                    this.coordinate[i].setCoordinateX(head.getCoordinateX());
-                    this.coordinate[i].setCoordinateY(yHead);
+                    this.coordinate[i].X = head.X;
+                    this.coordinate[i].Y = yHead;
                     yHead++;
                 }
             }
             else 
             {
-                if (head.getCoordinateX() > tail.getCoordinateX())
+                if (head.X > tail.X)
                 {
-                    xHead = tail.getCoordinateX();
+                    xHead = tail.X;
                 }
 
                 else
                 {
-                    xHead = head.getCoordinateX();
+                    xHead = head.X;
                 }
 
                 for (int i = 0; i < this.health; i++)
                 {
-                    this.coordinate[i].setCoordinateY(head.getCoordinateY());
-                    this.coordinate[i].setCoordinateX(xHead);
+                    this.coordinate[i].Y =head.Y;
+                    this.coordinate[i].X = xHead;
                     xHead++;
                 }
             }
@@ -97,8 +97,8 @@ namespace BattleShips
         {
             for (int i = 0; i < this.health; i++) 
             {
-                Console.WriteLine(this.coordinate[i].getCoordinateX());
-                Console.WriteLine(this.coordinate[i].getCoordinateY());
+                Console.WriteLine(this.coordinate[i].X);
+                Console.WriteLine(this.coordinate[i].Y);
             }
         }
 

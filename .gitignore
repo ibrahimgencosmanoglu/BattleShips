@@ -1,0 +1,13 @@
+*/bin/
+*/bin/*
+*/obj/
+*/obj/*
+.vs/
+.vs/*
+
+BattleShips/*/bin/
+BattleShips/*/bin/*
+BattleShips/*/obj/
+BattleShips/*/obj/*
+BattleShips/.vs/
+BattleShips/.vs/*

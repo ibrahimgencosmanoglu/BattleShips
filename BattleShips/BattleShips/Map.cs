@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BattleShips
 {
-    class Map
+    public class Map
     {
         private string mapName;
         private char[,] myMap;
@@ -86,7 +86,7 @@ namespace BattleShips
 
         public void setMap(Coordinate c, char mark) 
         {
-            myMap[c.getCoordinateX()- 1, c.getCoordinateY()- 1] = mark;
+            myMap[c.X - 1, c.Y - 1] = mark;
         }
         public bool checkShip(int x, int y) 
         {

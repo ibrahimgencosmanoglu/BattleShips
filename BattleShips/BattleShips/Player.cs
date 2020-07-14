@@ -23,7 +23,7 @@ namespace BattleShips
         }
 
         public void Torpedo(Coordinate target, Player enemy) {
-            if (enemy.myMap.checkShip(target.getCoordinateX(),target.getCoordinateY())) {
+            if (enemy.myMap.checkShip(target.X, target.Y)) {
                 Console.WriteLine("You Hit The Target");
                 this.targetMap.setMap(target, 'X');
                 enemy.myMap.setMap(target, 'X');
@@ -31,9 +31,10 @@ namespace BattleShips
             }
         }
 
-        private void findShip() 
-        { Ship shipTemp = new Ship
-        
+        private void findShip()
+        {
+            Ship shipTemp = new Ship();
+
         }
     }
 }
