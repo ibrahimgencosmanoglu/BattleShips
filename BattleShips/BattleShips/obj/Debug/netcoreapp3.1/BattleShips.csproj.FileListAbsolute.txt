@@ -1,0 +1,13 @@
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\bin\Debug\netcoreapp3.1\BattleShips.exe
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\bin\Debug\netcoreapp3.1\BattleShips.deps.json
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\bin\Debug\netcoreapp3.1\BattleShips.runtimeconfig.json
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\bin\Debug\netcoreapp3.1\BattleShips.runtimeconfig.dev.json
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\bin\Debug\netcoreapp3.1\BattleShips.dll
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\bin\Debug\netcoreapp3.1\BattleShips.pdb
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\obj\Debug\netcoreapp3.1\BattleShips.csprojAssemblyReference.cache
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\obj\Debug\netcoreapp3.1\BattleShips.AssemblyInfoInputs.cache
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\obj\Debug\netcoreapp3.1\BattleShips.AssemblyInfo.cs
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\obj\Debug\netcoreapp3.1\BattleShips.csproj.CoreCompileInputs.cache
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\obj\Debug\netcoreapp3.1\BattleShips.dll
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\obj\Debug\netcoreapp3.1\BattleShips.pdb
+C:\Users\ALİ\Source\Repos\BattleShips\BattleShips\obj\Debug\netcoreapp3.1\BattleShips.genruntimeconfig.cache
