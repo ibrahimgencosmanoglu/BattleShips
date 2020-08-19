@@ -10,13 +10,23 @@ namespace BattleShips
 
         public int Y { get; set; }
 
+        public bool IsEmpty { get; set; }
+
         public bool IsHit { get; set; }
 
-        public Coordinate()
-        {
-            X = 0;
-            Y = 0;
-            IsHit = false;
+        public Coordinate() {
+            this.X = 0;
+            this.Y = 0;
+            this.IsHit = false;
+            this.IsEmpty = true;
         }
+
+        public Coordinate(int x, int y) {
+            this.X = x;
+            this.Y = y;
+            this.IsHit = false;
+            this.IsEmpty = true;
+        }
+
     }
 }

@@ -6,7 +6,7 @@ namespace BattleShips
     {
         public List<IShip> Ships { get; set; }
         
-        public List<ICoordinate> Map { get; set; }
+        public Map MyMap { get; set; }
         
         public bool Attack(ICoordinate coordinate);
 

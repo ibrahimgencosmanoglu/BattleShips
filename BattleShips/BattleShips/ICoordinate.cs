@@ -7,5 +7,7 @@
         public int Y { get; set; }
         
         public bool IsHit { get; set; }
+
+        public bool IsEmpty { get; set; }
     }
 }

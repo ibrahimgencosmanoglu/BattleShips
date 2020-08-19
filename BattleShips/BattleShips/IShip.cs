@@ -4,7 +4,7 @@ namespace BattleShips
 {
     public interface IShip
     {
-        public List<ICoordinate> Coordinates { get; set; }
-        public bool Sinked { get; set; }
+       List<Coordinate> Coordinates { get; set; }
+       bool Sinked { get; set; }
     }
 }

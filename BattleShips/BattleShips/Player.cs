@@ -1,40 +1,72 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Text;
 
 namespace BattleShips
 {
     class Player
     {
-        private string name;
-        private Map targetMap;
-        private Map myMap;
-        private Ship shipW2;
-        private Ship shipW3;
-
-        public Player() 
-        {
-            targetMap = new Map();
-            targetMap.setName("Target Map");
+        public List<Ship> ships { get; set; }
+        public Map myMap { get; set; }
+        public Player() {
             myMap = new Map();
-            myMap.setName("My Map");
-            shipW2 = new Ship();
-            shipW3 = new Ship(3);
+            ships = new List<Ship>();
         }
-
-        public void Torpedo(Coordinate target, Player enemy) {
-            if (enemy.myMap.checkShip(target.X, target.Y)) {
-                Console.WriteLine("You Hit The Target");
-                this.targetMap.setMap(target, 'X');
-                enemy.myMap.setMap(target, 'X');
-                //if()
+        public void landShip(Coordinate Head,Coordinate Tail) {
+            Ship s1 = new Ship();
+            s1.SetShip(Head, Tail);
+            s1.SetHealth();
+            ships.Add(s1);
+        }
+        public bool findShip(Coordinate coordinate)
+        {
+            foreach (var ship in ships) {
+                if(ship.Coordinates.Exists(c => c.X == coordinate.X && c.Y == coordinate.Y))
+                    return true;
+            }
+                return false;
+        }
+        public void Attack(bool check,Coordinate coordinate) {
+            if (check)
+            {
+                Console.WriteLine(" Enemy Ship Has Been Hit ");
+                foreach (var c in this.myMap.GameMap)
+                {
+                    if (c.X == coordinate.X && c.Y == coordinate.Y)
+                    {
+                        c.IsHit = true;
+                        c.IsEmpty = false;
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine(" You Have Missed Your Enemy ");
+                foreach (var c in this.myMap.GameMap)
+                {
+                    if (c.X == coordinate.X && c.Y == coordinate.Y)
+                    {
+                        c.IsHit = true;
+                    }
+                }
             }
         }
 
-        private void findShip()
-        {
-            Ship shipTemp = new Ship();
-
+        public bool Attacked(Coordinate TargetCoordinate) {
+            Ship S = new Ship();
+            if (findShip(TargetCoordinate))
+            {
+                S = this.ships.Find(x => x.Coordinates.Exists(y => y.X == TargetCoordinate.X && y.Y == TargetCoordinate.Y));
+                foreach (var coordinates in S.Coordinates) {
+                    if (coordinates.X == TargetCoordinate.X && coordinates.Y == TargetCoordinate.Y)
+                        coordinates.IsHit = true;
+                }
+                S.UpdateHealth();
+                return true;
+            }
+            else
+                return false;
         }
     }
 }
