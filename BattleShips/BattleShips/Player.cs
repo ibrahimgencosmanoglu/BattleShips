@@ -7,17 +7,33 @@ namespace BattleShips
 {
     class Player
     {
+        public int ShipCounter { get; set; }
         public List<Ship> ships { get; set; }
         public Map myMap { get; set; }
-        public Player() {
+        public string Name { get; set; }
+        public Player(string name) {
+            this.Name = name;
             myMap = new Map();
             ships = new List<Ship>();
+        }
+
+        public void SetShipCounter() {
+            this.ShipCounter = ships.Count;
+        }
+        public void UpdateShipCounter() {
+            int shipcounter = 0;
+            foreach (var ship in ships) {
+                if (!(ship.Sinked))
+                    shipcounter++;
+            }
+            this.ShipCounter = shipcounter;
         }
         public void landShip(Coordinate Head,Coordinate Tail) {
             Ship s1 = new Ship();
             s1.SetShip(Head, Tail);
             s1.SetHealth();
             ships.Add(s1);
+            UpdateShipCounter();
         }
         public bool findShip(Coordinate coordinate)
         {

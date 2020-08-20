@@ -28,5 +28,12 @@ namespace BattleShips
             this.IsEmpty = true;
         }
 
+        public Coordinate(int x, int y, bool f) {
+            this.X = x;
+            this.Y = y;
+            this.IsHit = false;
+            this.IsEmpty = f;
+        }
+
     }
 }
